@@ -1,21 +1,20 @@
-# Android Open Source Project #
+# Android Open Source Project for libra #
 
-### 用你知道的方式把AOSP源码同步下来 ###
 
 ```bash
 
-# 清华源节点
+# Repo initalizing
 
-repo init -u https://aosp.tuna.tsinghua.edu.cn/platform/manifest -b android-10.0.0_r35 --depth=1
+repo init -u https://android.googlesource.com/platform/manifest -b android-10.0.0_r35 --depth=1
 
-git clone https://github.com/AOSP-10/local_manifests .repo/local_manifests -b 10
+git clone https://github.com/kyoto44/local_manifests .repo/local_manifests -b 10
 
-# 同步源码
+# source sync
 
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 ```
 
-### 编译 ###
+### Building ###
 
 ```bash
 
@@ -23,13 +22,13 @@ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 $ . build/envsetup.sh
 
 # Choose a target
-$ lunch aosp_$device-userdebug
+$ lunch aosp_libra-userdebug
 
 # Build the code
-$ brunch $device
+$ brunch libra
 ```
 
-### 已有源码切换分支 ###
+### Existing source switch branch  ###
 
 ```bash
 

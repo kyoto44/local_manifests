@@ -14,16 +14,11 @@
     <!-- add guard for AOSP hardware/qcom dir -->
     <linkfile src="os_pickup_aosp.mk" dest="hardware/qcom/Android.mk" />
     <!-- add guards for CAF repositories -->
-    <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8998/Android.bp" />
-    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8998/Android.mk" />
-    <linkfile src="os_pickup.bp" dest="vendor/nxp/opensource/pn5xx/Android.bp" />
-    <linkfile src="os_pickup.mk" dest="vendor/nxp/opensource/pn5xx/Android.mk" />
-    <linkfile src="os_pickup.bp" dest="vendor/nxp/opensource/sn100x/Android.bp" />
-    <linkfile src="os_pickup.mk" dest="vendor/nxp/opensource/sn100x/Android.mk" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8994/Android.mk" />
   </project>
-  <project path="hardware/qcom-caf/msm8998/audio" name="AOSP-10/hardware_qcom-caf_audio_msm8998" revision="10" remote="github" />
-  <project path="hardware/qcom-caf/msm8998/display" name="AOSP-10/hardware_qcom-caf_display_msm8998" revision="10" remote="github" />
-  <project path="hardware/qcom-caf/msm8998/media" name="AOSP-10/hardware_qcom-caf_media_msm8998" revision="10" remote="github" />
+  <project path="hardware/qcom-caf/msm8994/audio" name="android_hardware_qcom_audio" revision="lineage-17.1-caf-msm8994" remote="lineage" />
+  <project path="hardware/qcom-caf/msm8994/display" name="android_hardware_qcom_display" revision="lineage-17.1-caf-msm8994" remote="lineage" />
+  <project path="hardware/qcom-caf/msm8994/media" name="android_hardware_qcom_media" revision="lineage-17.1-caf-msm8994" remote="lineage" />
   <project path="hardware/qcom-caf/thermal" name="android_hardware_qcom_thermal" remote="lineage" />
   <project path="hardware/qcom-caf/wlan" name="android_hardware_qcom_wlan" revision="lineage-17.1-caf" remote="lineage" />
   <project path="packages/resources/devicesettings" name="LineageOS/android_packages_resources_devicesettings" revision="lineage-17.1" remote="github" />
@@ -115,5 +110,10 @@
   <project path="system/core" name="AOSP-10/system_core" revision="10" remote="github" />
   <project path="system/sepolicy" name="AOSP-10/system_sepolicy" revision="10" remote="github" />
   <project path="system/vold" name="AOSP-10/system_vold" revision="10" remote="github" />
+
+  <!-- Libra (Mi4C) !-->
+	<project name="android_device_xiaomi_libra" path="device/xiaomi/libra" remote="kyoto44" revision="aosp-10" />
+	<project name="android_vendor_xiaomi_libra" path="vendor/xiaomi/libra" remote="WJXXBSH" revision="lineage-16.0" />
+	<project name="android_kernel_xiaomi_libra" path="kernel/xiaomi/libra" remote="WJXXBSH" revision="master" />
 
 </manifest>
